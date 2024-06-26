@@ -43,7 +43,7 @@ jobs:
 
       - name: Checks for Sidekiq
         run: |
-          nuclei -l output/all -es info  -retries 3  | notify -slack -slack-webhook-url  ${{ secrets.SLACK_TOKEN }}
+          nuclei -l output/all -etags ssl -es info  -retries 3  | notify -slack -slack-webhook-url  ${{ secrets.SLACK_TOKEN }}
  
       - name: Commit results to Github
         run: |
