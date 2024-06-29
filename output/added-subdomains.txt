@@ -1,2 +1,0 @@
-http://config-service.dev.loveholidays.com
-https://config-service.dev.loveholidays.com
