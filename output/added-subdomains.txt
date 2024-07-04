@@ -1,0 +1,4 @@
+http://backoffice-collector.loveholidays.com
+http://skyscanner-api.loveholidays.com
+https://skyscanner-api.loveholidays.com
+https://backoffice-collector.loveholidays.com
