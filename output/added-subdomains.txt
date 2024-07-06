@@ -1,4 +1,0 @@
-http://api.loveholidays.com
-https://api.loveholidays.com
-http://staging.agent.loveholidays.com
-https://staging.agent.loveholidays.com
