@@ -251,3 +251,7 @@ http://api.loveholidays.com
 https://api.loveholidays.com
 http://staging.agent.loveholidays.com
 https://staging.agent.loveholidays.com
+http://backoffice-training.loveholidays.com
+http://config-service.loveholidays.com
+https://backoffice-training.loveholidays.com
+https://config-service.loveholidays.com
