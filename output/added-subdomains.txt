@@ -1,4 +1,1 @@
-http://backoffice-training.loveholidays.com
-http://config-service.loveholidays.com
-https://backoffice-training.loveholidays.com
-https://config-service.loveholidays.com
+https://tekton.development.lvh.systems
