@@ -40,11 +40,6 @@ jobs:
         run: |
           git add output/all
           git add output/added-subdomains.txt
-
-      - name: Checks for Sidekiq
-        run: |
-          nuclei -l output/all -etags ssl -es info  -retries 3  | notify -slack -slack-webhook-url  ${{ secrets.SLACK_TOKEN }}
- 
       - name: Commit results to Github
         run: |
           git pull 
@@ -57,3 +52,8 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
+
+      - name: Checks for Sidekiq
+        run: |
+          nuclei -l output/all -etags ssl -es info  -retries 3  | notify -slack -slack-webhook-url  ${{ secrets.SLACK_TOKEN }}
+ 
