@@ -1,0 +1,53 @@
+name: domain-monitoring
+
+on:
+    schedule:
+      - cron: '0 */22 * * *'
+    workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+
+      - name: Setup golang
+        uses: actions/setup-go@v5
+        with:
+          go-version: 1.21
+      - name: Setup Dependencies
+        run: sudo apt-get install libpcap-dev
+
+      - name: Installing Most the tools 
+        run: |
+           GO111MODULE=on go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+           GO111MODULE=on go install -v  github.com/tomnomnom/assetfinder@latest
+           GO111MODULE=on go install -v  github.com/projectdiscovery/httpx/cmd/httpx@latest
+           GO111MODULE=on go install -v github.com/tomnomnom/anew@latest
+           GO111MODULE=on go install -v  github.com/projectdiscovery/notify/cmd/notify@v0.0.2
+        shell: bash
+
+      - name: Subdomains 
+        run: |
+          subfinder -dL hosts.txt  -all | assetfinder -subs-only | httpx -no-fallback -retries 3 > output/new
+          cat output/new | anew output/all > output/added-subdomains.txt
+          cat output/added-subdomains.txt | notify -slack -slack-webhook-url ${{ secrets.SLACK_TOKEN }}
+        shell: bash
+
+      - name: Create local changes
+        run: |
+          git add output/all
+          git add output/added-subdomains.txt
+      - name: Commit results to Github
+        run: |
+          git pull 
+          git config --local user.email "tester@tester.com"
+          git config --global user.name "monitor"
+          git commit -m "PD-Actions report" -a --allow-empty
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
