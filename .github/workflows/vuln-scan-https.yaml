@@ -1,4 +1,4 @@
-name: vuln-scan
+name: vuln-scan-https
 
 on:
     schedule:
