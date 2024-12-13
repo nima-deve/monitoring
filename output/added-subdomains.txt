@@ -1,0 +1,2 @@
+http://availability-service-de.lvh.systems
+https://availability-service-de.lvh.systems
