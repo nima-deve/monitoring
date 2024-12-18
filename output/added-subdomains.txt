@@ -1,2 +1,0 @@
-http://checkout-service.staging.lvh.systems
-https://checkout-service.staging.lvh.systems
