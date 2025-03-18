@@ -1,2 +1,0 @@
-http://alina.staging.lvh.systems
-https://alina.staging.lvh.systems
