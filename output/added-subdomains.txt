@@ -1,2 +1,0 @@
-http://agent-forms.staging.lvh.systems
-https://agent-forms.staging.lvh.systems
