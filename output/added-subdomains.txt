@@ -1,2 +1,0 @@
-http://holiday-terms-service.staging.lvh.systems
-https://holiday-terms-service.staging.lvh.systems
