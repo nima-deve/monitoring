@@ -1,0 +1,2 @@
+http://booking-documents-service.staging.lvh.systems
+https://booking-documents-service.staging.lvh.systems
