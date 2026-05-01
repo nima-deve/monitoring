@@ -1,2 +1,0 @@
-http://fastly-logs.staging.lvh.systems
-https://fastly-logs.staging.lvh.systems
