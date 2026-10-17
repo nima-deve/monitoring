@@ -1,2 +1,2 @@
-http://insights-oauth.lvh.systems
-https://insights-oauth.lvh.systems
+http://fastly-logs-statsig.lvh.systems
+https://fastly-logs-statsig.lvh.systems
