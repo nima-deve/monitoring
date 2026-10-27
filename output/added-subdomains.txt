@@ -1,2 +1,0 @@
-http://admin.lvh.systems
-https://admin.lvh.systems
