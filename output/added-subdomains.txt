@@ -1,2 +1,0 @@
-http://temporal.staging.lvh.systems
-https://temporal.staging.lvh.systems
