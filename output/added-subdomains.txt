@@ -1,4 +1,0 @@
-http://telescope.staging.lvh.systems
-http://mcp-telescope.staging.lvh.systems
-https://mcp-telescope.staging.lvh.systems
-https://telescope.staging.lvh.systems
